@@ -8,3 +8,6 @@
 
 + handle_zh_eng_subtitle.py
 > 遍历文件夹，将所有的txt文件处理后存储为md。txt处理逻辑：中文行尾加空格
+
++ batch_rename_files.py
+> 批量重命名文件
