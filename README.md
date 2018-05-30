@@ -11,3 +11,6 @@
 
 + batch_rename_files.py
 > 批量重命名文件
+
++ convert_srt_to_lrc.py
+> 将字幕srt文件内容另存为歌词lrc文件格式
