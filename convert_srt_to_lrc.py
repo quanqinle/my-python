@@ -44,17 +44,17 @@ def convert_srt_to_lrc():
                     if (line.isspace() or line.isnumeric()):
                         continue
                     if line.find('-->') > 0:
-                        fout.write(' ' + endtime) # 应用上次存储的结束时间戳
+                        fout.write(endtime) # 应用上次存储的结束时间戳
 
                         words = line.split('-->')
-                        starttime = get_timeline(words[0].strip(), 0.030)
-                        endtime = get_timeline(words[1].strip(), 0.030)
+                        starttime = get_timeline(words[0].strip(), 0.050)
+                        endtime = get_timeline(words[1].strip(), 0.050)
                         fout.write('\n' + starttime + ' ')
                         continue
                     else:
                         # u = line.decode('utf-16')
                         # line = u.encode('utf-8')
-                        fout.write(line)
+                        fout.write(line + ' ')
 
 
 def main():
