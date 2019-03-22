@@ -9,9 +9,9 @@ spams = ['电子书', 'txt', '下载', '免费']
 
 def is_spam_line(line, threshold=1):
     '''
-    该行是否是垃圾行  
-    :param line:  
-    :param threshold: 存在的垃圾词数目超过这个阈值才认为是垃圾行  
+    该行是否是垃圾行
+    :param line:
+    :param threshold: 存在的垃圾词数目超过这个阈值才认为是垃圾行
     :return: boolean
     '''
     cnt = 0
@@ -29,15 +29,16 @@ def delete_spam():
     '''
     删除文件中的特定字符串
     '''
-    with open('橙红年代.txt', 'r', encoding='gbk') as fin:
-        with open('橙红年代-new.txt', 'w', encoding='utf-8') as fout:
+    with open('《侠隐》张北海.txt', 'r', encoding='utf-8') as fin:
+        with open('《侠隐》张北海-new.txt', 'w', encoding='utf-8') as fout:
             for line in fin.readlines():
                 line = line.strip()
+                line = line.rtrip()
 
                 if (line.isspace() or line == ''):
                     # fout.write('\n') # 不删除空行
                     continue
-                elif not is_spam_line(line, 2):
+                elif not is_spam_line(line, 1):
                     fout.write(line + '\n')
 
 

@@ -3,8 +3,6 @@
 # 将字幕srt文件内容另存为歌词lrc文件格式
 
 import os
-import re
-
 
 def get_timeline(t, ahead=0):
     '''
